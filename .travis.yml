@@ -6,4 +6,4 @@ services:
 before_install:
     - docker build -f Dockerfile.dev -t bigodinho22/docker-course . 
 script:
-    - docker run bigodinho22/docker-course npm run test -- --coverage
+    - docker run -e CI=true bigodinho22/docker-course npm run test
